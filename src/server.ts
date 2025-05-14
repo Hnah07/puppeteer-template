@@ -2,14 +2,13 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
-import { notFound } from "./controllers/notFoundController";
 import scrapeRoutes from "./routes/scrapeRoutes";
 import mongoose from "mongoose";
 import { errorHandler } from "./middleware/errorHandler";
 
 // Variables
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 300;
 
 // Middleware
 app.use(cors());
@@ -17,7 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/", scrapeRoutes);
-app.all("*splat", notFound);
+app.all("*splat");
 
 // Error handling (must be the last)
 app.use(errorHandler);
