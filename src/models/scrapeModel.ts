@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const todoSchema = new mongoose.Schema(
+const scrapeSchema = new mongoose.Schema(
   {
     task: {
       type: String,
@@ -17,4 +17,4 @@ const todoSchema = new mongoose.Schema(
   }
 );
 
-export const Todo = mongoose.model("Todo", todoSchema);
+export const Scrape = mongoose.model("Scrape", scrapeSchema);

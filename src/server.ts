@@ -3,21 +3,20 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import { notFound } from "./controllers/notFoundController";
-import testRoutes from "./routes/exampleRoutes";
-import { helloMiddleware } from "./middleware/exampleMiddleware";
+import scrapeRoutes from "./routes/scrapeRoutes";
 import mongoose from "mongoose";
 import { errorHandler } from "./middleware/errorHandler";
 
 // Variables
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api", helloMiddleware, testRoutes);
+app.use("/", scrapeRoutes);
 app.all("*splat", notFound);
 
 // Error handling (must be the last)
