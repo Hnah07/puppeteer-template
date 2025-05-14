@@ -15,20 +15,17 @@ Puppeteer is a Node library that provides a high-level API to control Chrome or 
 
 ```
 ├── src
-│   ├── controllers
-│   │   └── exampleController.ts
-│   ├── middleware
-│   │   └── exampleMiddleware.ts
-│   ├── models
-│   │   └── exampleModel.ts
-│   ├── routes
-│   │   └── exampleRoutes.ts
-│   └── server.ts    // Main entry point of the application
-├── dist             // Compiled output (auto-generated)
-├── package.json     // Project dependencies and scripts
-├──.gitignore        // Ignore files to github
-├── tsconfig.json    // TypeScript configuration
-└── README.md        // Project documentation
+│   ├── controllers/     // Controller files for handling business logic
+│   ├── middleware/      // Custom middleware functions
+│   ├── routes/         // Route definitions
+│   ├── errors/         // Custom error handling
+│   └── server.ts       // Main entry point of the application
+├── node_modules/       // Dependencies (auto-generated)
+├── package.json        // Project dependencies and scripts
+├── package-lock.json   // Dependency lock file
+├── .gitignore         // Git ignore rules
+├── tsconfig.json      // TypeScript configuration
+└── README.md          // Project documentation
 ```
 
 ## Getting Started
@@ -95,4 +92,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Happy testing! 🎯
+Happy playing! 🥳
